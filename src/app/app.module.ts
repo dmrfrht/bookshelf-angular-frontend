@@ -9,7 +9,7 @@ import { PageModule } from './pages/page.module';
     AppComponent
   ],
   imports: [
-    AppRoutingModule, 
+    AppRoutingModule,
     PageModule
   ],
   providers: [],
