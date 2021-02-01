@@ -18,7 +18,15 @@ export class CategoryService {
     return this.httpClient.get<any>(this.apiUrl).pipe(map(result => result.data));
   }
 
+  getCategoryById(id: string) {
+    return this.httpClient.get<any>(`${this.apiUrl}/${id}`).pipe(map(result => result.data));
+  }
+
   addCategory(category: Category) {
     return this.httpClient.post<any>(this.apiUrl, category);
+  }
+
+  updateCategory(categoryId: string, category: Category) {
+    return this.httpClient.put<any>(`${this.apiUrl}/${categoryId}`, category);
   }
 }
