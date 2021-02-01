@@ -13,6 +13,7 @@ import {HeaderComponent} from '../nav/header/header.component';
 import {AdminHomeComponent} from './admin-home/admin-home.component';
 import {AdminCategoryNeweditComponent} from './admin-category-newedit/admin-category-newedit.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { AdminCategoryListComponent } from './admin-category-list/admin-category-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     AdminHomeComponent,
-    AdminCategoryNeweditComponent
+    AdminCategoryNeweditComponent,
+    AdminCategoryListComponent
   ],
   imports: [
     CommonModule,
