@@ -22,12 +22,27 @@ export class AdminCategoryListComponent implements OnInit {
     this.categoryService.getCategories().subscribe(result => {
       this.categories = result;
       this.categories.forEach((category, index) => {
-        this.categories[index]["no"] = index + 1;
+        this.categories[index]['no'] = index + 1;
       });
 
       this.dataSource = new MatTableDataSource<Category>(this.categories);
 
       this.dataSource.paginator = this.paginator;
+    });
+  }
+
+  delete(categoryId: string) {
+    this.categoryService.deleteCategory(categoryId).subscribe(result => {
+      if (result.status === 'success') {
+        const category = this.categories.filter(x => x._id === categoryId)[0];
+        const index = this.categories.indexOf(category);
+
+        this.categories.splice(index, 1);
+
+        this.dataSource = new MatTableDataSource<Category>(this.categories);
+      } else {
+        alert('silme işlemi sırasında bir hata oluştu..');
+      }
     });
   }
 

@@ -19,8 +19,14 @@
     <th mat-header-cell *matHeaderCellDef> İşlemler</th>
     <td mat-cell *matCellDef="let category">
       <a mat-raised-button color="primary" [routerLink]="['/admin/category', category._id]">
+        <mat-icon>mode_edit</mat-icon>
         Düzenle
       </a>
+      <button class="ml-3" mat-raised-button color="warn"
+        (click)="delete(category._id)">
+        <mat-icon>delete_forever</mat-icon>
+        Sil
+      </button>
     </td>
   </ng-container>
 
