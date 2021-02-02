@@ -13,8 +13,9 @@ import {HeaderComponent} from '../nav/header/header.component';
 import {AdminHomeComponent} from './admin-home/admin-home.component';
 import {AdminCategoryNeweditComponent} from './admin-category-newedit/admin-category-newedit.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { AdminCategoryListComponent } from './admin-category-list/admin-category-list.component';
-import { AdminBookNeweditComponent } from './admin-book-newedit/admin-book-newedit.component';
+import {AdminCategoryListComponent} from './admin-category-list/admin-category-list.component';
+import {AdminBookNeweditComponent} from './admin-book-newedit/admin-book-newedit.component';
+import {AdminBookListComponent} from './admin-book-list/admin-book-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AdminBookNeweditComponent } from './admin-book-newedit/admin-book-newed
     AdminHomeComponent,
     AdminCategoryNeweditComponent,
     AdminCategoryListComponent,
-    AdminBookNeweditComponent
+    AdminBookNeweditComponent,
+    AdminBookListComponent
   ],
   imports: [
     CommonModule,
