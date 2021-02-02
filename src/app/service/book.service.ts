@@ -16,4 +16,8 @@ export class BookService {
   addBook(book: Book) {
     return this.httpClient.post<any>(this.apiUrl, book);
   }
+
+  saveBookImage(image: string) {
+    return this.httpClient.post<any>(`${this.apiUrl}/saveImage`, image);
+  }
 }
