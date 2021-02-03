@@ -48,6 +48,19 @@ export class AdminBookNeweditComponent implements OnInit {
       this.title = 'Kitap Ekle';
       this.btnText = 'Ekle';
       this.type = 'add';
+    } else {
+      this.title = 'Kitap Güncelle';
+      this.btnText = 'Güncelle';
+      this.type = 'edit';
+      this.bookService.getBookById(this.bookId).subscribe(result => {
+        this.book = result;
+        this.bookForm.controls.title.setValue(this.book.title);
+        this.bookForm.controls.author.setValue(this.book.author);
+        this.bookForm.controls.price.setValue(this.book.price);
+        this.bookForm.controls.stock.setValue(this.book.stock);
+        this.bookForm.controls.picture.setValue(this.book.picture);
+        this.bookForm.controls.categoryBy.setValue(this.book.categoryBy);
+      });
     }
 
     this.bookForm = new FormGroup({
@@ -73,6 +86,23 @@ export class AdminBookNeweditComponent implements OnInit {
           .subscribe(result => {
             this.router.navigateByUrl('/admin');
           });
+      } else {
+        if (this.formData == null) { // resim seçmemiş
+          this.bookService.updateBook(this.book._id, this.bookForm.value).subscribe(result => {
+            this.router.navigateByUrl('/admin');
+          });
+        } else {
+          this.bookService.saveBookImage(this.formData)
+            .pipe(
+              map(result => {
+                this.bookForm.controls.picture.setValue(result.url);
+              }),
+              mergeMap(() => this.bookService.updateBook(this.book._id, this.bookForm.value))
+            )
+            .subscribe(result => {
+              this.router.navigateByUrl('/admin');
+            });
+        }
       }
     }
   }
@@ -84,4 +114,5 @@ export class AdminBookNeweditComponent implements OnInit {
 
     return null;
   }
+
 }

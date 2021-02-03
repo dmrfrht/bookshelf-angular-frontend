@@ -12,7 +12,7 @@ export class CategoryService {
   constructor(private httpClient: HttpClient) {
   }
 
-  apiUrl: string = `${environment.baseUrl}/category`;
+  apiUrl: string | any = `${environment.baseUrl}/category`;
 
   getCategories() {
     return this.httpClient.get<any>(this.apiUrl).pipe(map(result => result.data));

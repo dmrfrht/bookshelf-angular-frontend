@@ -30,4 +30,19 @@ export class AdminBookListComponent implements OnInit {
     });
   }
 
+  delete(bookId: string) {
+    this.bookService.deleteBook(bookId).subscribe(result => {
+      if (result.status === 'success') {
+        const book = this.books.filter(x => x._id === bookId)[0];
+        const index = this.books.indexOf(book);
+
+        this.books.splice(index, 1);
+
+        this.dataSource = new MatTableDataSource<Book>(this.books);
+      } else {
+        alert('silme işlemi sırasında bir hata oluştur');
+      }
+    });
+  }
+
 }

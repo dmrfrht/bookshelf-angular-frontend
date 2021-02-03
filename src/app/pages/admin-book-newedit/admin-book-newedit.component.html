@@ -28,6 +28,11 @@
           formControlName="title"
           matInput
         />
+        <mat-error *ngIf="this.bookForm.controls.title.invalid">
+          <div *ngIf="this.bookForm.controls.title.hasError('required')">
+            'bu alan boş geçilemez'
+          </div>
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -36,6 +41,11 @@
           formControlName="author"
           matInput
         />
+        <mat-error *ngIf="this.bookForm.controls.author.invalid">
+          <div *ngIf="this.bookForm.controls.author.hasError('required')">
+            'bu alan boş geçilemez'
+          </div>
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -44,6 +54,11 @@
           formControlName="price"
           matInput
         />
+        <mat-error *ngIf="this.bookForm.controls.price.invalid">
+          <div *ngIf="this.bookForm.controls.price.hasError('required')">
+            'bu alan boş geçilemez'
+          </div>
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -52,9 +67,14 @@
           formControlName="stock"
           matInput
         />
+        <mat-error *ngIf="this.bookForm.controls.stock.invalid">
+          <div *ngIf="this.bookForm.controls.stock.hasError('required')">
+            'bu alan boş geçilemez'
+          </div>
+        </mat-error>
       </mat-form-field>
 
-      <button type="submit" class="mt-2" mat-raised-button color="primary">Ekle</button>
+      <button type="submit" class="mt-2" mat-raised-button color="primary">{{ btnText }}</button>
     </form>
   </div>
 </div>
