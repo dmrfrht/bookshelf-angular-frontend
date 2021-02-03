@@ -12,3 +12,24 @@ body {
 .form-container > * {
   width: 100%;
 }
+
+.cardBook {
+  width: 250px;
+  margin: 0px 10px 10px 10px;
+  float: left;
+}
+
+.cardBook:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, .3);
+}
+
+.cardBook img {
+  width: 230px;
+  height: 350px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

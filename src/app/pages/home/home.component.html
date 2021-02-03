@@ -1,1 +1,14 @@
-<p>Ferhat Demir</p>
+<a *ngFor="let book of books" [routerLink]="['/book', book._id]" style="text-decoration: none;">
+  <mat-card class="cardBook">
+    <mat-card-content style="padding: 10px;">
+      <img mat-card-image [src]="[book.picture]" [alt]="[book.title]"/>
+    </mat-card-content>
+
+    <mat-card-actions style="margin-left: 10px;">
+      <div class="cardInfo">
+        <span><strong>{{ book.author }}</strong></span>
+        <span><strong style="color: #ee00ff;">{{ book.price }} ₺</strong></span>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</a>

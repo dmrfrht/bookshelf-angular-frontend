@@ -7,7 +7,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatPaginatorModule,
-  MatTableModule, MatIconModule, MatAutocompleteModule
+  MatTableModule, MatIconModule, MatAutocompleteModule, MatCardModule
 } from '@angular/material';
 
 
@@ -24,6 +24,7 @@ import {
     MatTableModule,
     MatIconModule,
     MatAutocompleteModule,
+    MatCardModule,
   ],
   exports: [
     MatToolbarModule,
@@ -35,6 +36,7 @@ import {
     MatTableModule,
     MatIconModule,
     MatAutocompleteModule,
+    MatCardModule,
   ]
 })
 export class MaterialModule {
