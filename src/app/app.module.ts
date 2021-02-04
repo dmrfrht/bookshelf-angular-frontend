@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PageModule } from './pages/page.module';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {PageModule} from './pages/page.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,8 @@ import { PageModule } from './pages/page.module';
     PageModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

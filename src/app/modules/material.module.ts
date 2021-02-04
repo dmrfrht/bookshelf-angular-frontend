@@ -7,7 +7,11 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatPaginatorModule,
-  MatTableModule, MatIconModule, MatAutocompleteModule, MatCardModule
+  MatTableModule,
+  MatIconModule,
+  MatAutocompleteModule,
+  MatCardModule,
+  MatListModule
 } from '@angular/material';
 
 
@@ -25,6 +29,7 @@ import {
     MatIconModule,
     MatAutocompleteModule,
     MatCardModule,
+    MatListModule,
   ],
   exports: [
     MatToolbarModule,
@@ -37,6 +42,7 @@ import {
     MatIconModule,
     MatAutocompleteModule,
     MatCardModule,
+    MatListModule,
   ]
 })
 export class MaterialModule {

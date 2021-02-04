@@ -22,6 +22,10 @@ export class BookService {
     return this.httpClient.get<any>(`${this.apiUrl}/${id}`).pipe(map(result => result.data));
   }
 
+  getBooksByCategoryId(categoryId: string) {
+    return this.httpClient.get<any>(`${environment.baseUrl}/books/${categoryId}`).pipe(map(result => result.data));
+  }
+
   addBook(book: Book) {
     return this.httpClient.post<any>(this.apiUrl, book);
   }

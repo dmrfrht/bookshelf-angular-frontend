@@ -16,6 +16,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AdminCategoryListComponent} from './admin-category-list/admin-category-list.component';
 import {AdminBookNeweditComponent} from './admin-book-newedit/admin-book-newedit.component';
 import {AdminBookListComponent} from './admin-book-list/admin-book-list.component';
+import {CategoryMenuComponent} from '../components/category-menu/category-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {AdminBookListComponent} from './admin-book-list/admin-book-list.componen
     AdminCategoryNeweditComponent,
     AdminCategoryListComponent,
     AdminBookNeweditComponent,
-    AdminBookListComponent
+    AdminBookListComponent,
+    CategoryMenuComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,7 @@ import {AdminBookListComponent} from './admin-book-list/admin-book-list.componen
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class PageModule {
