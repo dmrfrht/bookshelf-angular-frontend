@@ -6,6 +6,7 @@ import {AdminCategoryNeweditComponent} from './pages/admin-category-newedit/admi
 import {AdminHomeComponent} from './pages/admin-home/admin-home.component';
 import {HomeComponent} from './pages/home/home.component';
 import {AdminBookNeweditComponent} from './pages/admin-book-newedit/admin-book-newedit.component';
+import {BookComponent} from './pages/book/book.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: 'kategori/:id',
         component: HomeComponent
+      },
+      {
+        path: 'book/:id',
+        component: BookComponent
       }
     ]
   },

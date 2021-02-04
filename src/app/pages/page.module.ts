@@ -17,6 +17,7 @@ import {AdminCategoryListComponent} from './admin-category-list/admin-category-l
 import {AdminBookNeweditComponent} from './admin-book-newedit/admin-book-newedit.component';
 import {AdminBookListComponent} from './admin-book-list/admin-book-list.component';
 import {CategoryMenuComponent} from '../components/category-menu/category-menu.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {CategoryMenuComponent} from '../components/category-menu/category-menu.c
     AdminCategoryListComponent,
     AdminBookNeweditComponent,
     AdminBookListComponent,
-    CategoryMenuComponent
+    CategoryMenuComponent,
+    BookComponent
   ],
   imports: [
     CommonModule,

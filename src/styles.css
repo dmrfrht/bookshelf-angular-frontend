@@ -37,3 +37,24 @@ body {
 a {
   text-decoration: none;
 }
+
+.book-detail-text {
+  font-weight: bold;
+  width: 100px;
+}
+
+.all-list {
+  margin-left: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.all-list:hover a {
+  color: #ee00ff !important;
+}
+
+.active-link {
+  background-color: #ee00ff;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
