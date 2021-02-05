@@ -1,10 +1,13 @@
-# BookshelfAngularFrontend
+# Book Shelf Project Angular [Frontend]
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
 
+## Book Shelf Rest Api [Backend]
+You need backend server this [link](https://github.com/dmrfrht/bookshelf-rest-api-backend)
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install` and `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
