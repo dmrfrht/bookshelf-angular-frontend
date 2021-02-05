@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
 
+## Homepage Pic
+![localhost_4200_ (1)](https://user-images.githubusercontent.com/30186772/107010819-eab71b00-67a7-11eb-98dc-261ee2a07bb3.png)
+
 ## Book Shelf Rest Api [Backend]
 You need backend server this [link](https://github.com/dmrfrht/bookshelf-rest-api-backend)
 
